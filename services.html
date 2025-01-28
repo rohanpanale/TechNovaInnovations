@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechNova Innovations offers a variety of cutting-edge technology services including Web Development, AI/ML Solutions, and Cloud Services.">
+    <meta name="keywords" content="web development, AI, machine learning, cloud services, business solutions, technology">
+    <meta name="author" content="TechNova Innovations">
+    <title>Services | TechNova Innovations</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="favicon.ico">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <canvas class="paintbrushCanvas"></canvas>
+    
+    <button class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em" class="theme-toggle__dark-inner" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M16 9c3.9 0 7 3.1 7 7s-3.1 7-7 7" />
+            <path d="M16 .5C7.4.5.5 7.4.5 16S7.4 31.5 16 31.5 31.5 24.6 31.5 16 24.6.5 16 .5zm0 28.1V23c-3.9 0-7-3.1-7-7s3.1-7 7-7V3.4C23 3.4 28.6 9 28.6 16S23 28.6 16 28.6z" />
+        </svg>
+    </button>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">TechNova Innovations</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="hero-content">
+            <h1 class="slide-in-text">Our Expertise</h1>
+            <p class="slide-in-text">Innovative Solutions to Empower Your Business</p>
+        </div>
+    </header>
+    
+    <section id="services">
+        <h2>Our Core Services</h2>
+        <div class="service-cards">
+            
+            <div class="service-card" onclick="showPopup('Web Development', 'We create responsive, user-friendly websites tailored to your business needs. Our web development services focus on building high-performance websites with clean code and modern designs.', 'fas fa-code')">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>Creating responsive, user-friendly websites tailored to your business needs.</p>
+            </div>
+            
+            <div class="service-card" onclick="showPopup('Cloud Solutions', 'Our scalable, secure, and cost-efficient cloud computing services are designed to help businesses grow. We offer end-to-end cloud solutions including migration, management, and optimization.', 'fas fa-cloud')">
+                <i class="fas fa-cloud service-icon"></i>
+                <h3>Cloud Solutions</h3>
+                <p>Scalable, secure, and cost-efficient cloud computing services for businesses of all sizes.</p>
+            </div>
+            
+            <div class="service-card" onclick="showPopup('AI/ML Services', 'Leverage AI and machine learning to transform your business. Our AI/ML services include custom models, predictive analytics, and intelligent automation to drive innovation.', 'fas fa-robot')">
+                <i class="fas fa-robot service-icon"></i>
+                <h3>AI/ML Services</h3>
+                <p>Leverage artificial intelligence and machine learning to transform your data into actionable insights.</p>
+            </div>
+            
+            <div class="service-card" onclick="showPopup('Cybersecurity', 'Our cybersecurity services provide comprehensive protection against threats. We offer security assessments, vulnerability management, and data protection services to secure your business infrastructure.', 'fas fa-shield-alt')">
+                <i class="fas fa-shield-alt service-icon"></i>
+                <h3>Cybersecurity</h3>
+                <p>Protect your business with comprehensive security solutions designed to prevent and respond to threats.</p>
+            </div>
+        </div>
+    </section>
+    <div id="overlay" class="overlay"></div>
+    
+    <div id="service-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            
+            <i id="popup-icon" class="popup-icon"></i>
+            <div class="popup-text">
+                <h4 id="popup-title"></h4>
+                <p id="popup-description"></p>
+                <button id="contact-btn" onclick="window.location.href='contact.html'">Contact</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div>
+            <p>&copy; 2025 TechNova Innovations. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
