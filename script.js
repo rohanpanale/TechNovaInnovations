@@ -129,7 +129,7 @@ function initMap() {
 }
 function loadGoogleMapsScript() {
     var script = document.createElement("script");
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyClZzZ55rK8-1N4koHu0OjoWcszQHUNksI&callback=initMap";  
+    script.src = "https://maps.googleapis.com/maps/api/js?key=GOOGLE_API_KEY&callback=initMap";  
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
